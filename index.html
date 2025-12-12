@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEO対策 By BLITZ Marketing | 店舗集客支援サービス</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .bg-yellow-brand {
+            background-color: #FFD700; /* Gold/Yellow */
+        }
+        .text-yellow-brand {
+            color: #FFD700;
+        }
+        /* Nudge Popup Animation */
+        @keyframes slideInUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .nudge-popup {
+            animation: slideInUp 0.5s ease-out forwards;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        .animate-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .animate-shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+            transform: skewX(-25deg);
+            animation: shine 3s infinite;
+        }
+                
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 pb-24 md:pb-0">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl md:text-2xl tracking-tighter text-black flex items-center gap-2">
+                <!-- User requested logo_02 -->
+                <img src="img/logo_02.png" alt="logo" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display:none;">BLITZ Marketing</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                <a href="tel:0120276016" class="flex items-center justify-center gap-2 bg-[#00ab00] text-white px-5 py-2.5 rounded-full flex items-center justify-center font-bold  px-5 py-2.5 rounded-full hover:opacity-80 transition">                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    0120-276-016</a>
+
+                <a href="#contact" class="flex items-center justify-center gap-2 bg-[#0025b6] text-white font-bold  px-5 py-2.5 rounded-full hover:opacity-80 transition">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    お問い合わせ
+                  </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <div class="flex flex-col space-y-4">
+                <a href="tel:0120276016" class="flex items-center justify-center gap-2 bg-[#00ab00] text-white px-5 py-2.5 rounded-full flex items-center justify-center font-bold  px-5 py-2.5 rounded-full hover:opacity-80 transition">                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    0120-276-016</a>
+
+                <a href="#contact" class="flex items-center justify-center gap-2 bg-[#0025b6] text-white font-bold  px-5 py-2.5 rounded-full hover:opacity-80 transition">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    お問い合わせ
+                  </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (New Design) -->
+    <section class="relative pt-28 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-blue-50 text-gray-800">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-100/30 to-transparent skew-x-12"></div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                
+                <!-- Left Column: Copy & Visual -->
+                <div class="lg:w-7/12 text-center lg:text-left pt-6">
+                    <!-- Tag -->
+                    <div class="inline-block bg-[#0025b6] text-white text-xs md:text-sm font-bold px-4 py-1 mb-6 rounded-sm tracking-wider shadow-lg">
+                        店舗ビジネス特化型集客支援サービス
+                    </div>
+                    
+                    <!-- Headline -->
+                    <h1 class="text-3xl md:text-5xl lg:text-[3.5rem] font-black leading-tight mb-4 text-[#0025b6] tracking-tight">
+                        エリア検索<span class="text-black">で選ばれるお店へ</span><br>
+                        <span class="text-black text-2xl md:text-4xl lg:text-5xl mt-2 block">MEO対策で自動で集客</span>
+                    </h1>
+                    
+                    <!-- Subheadline -->
+                    <p class="text-gray-600 text-lg md:text-xl font-bold mb-10">
+                        確かなMEO技術であなたの店舗をマップの最上位へ。<br class="hidden md:block">
+                        圧倒的な知名度と集客力を提供します。
+                    </p>
+
+                    <!-- Visual Area (Device + Badge) -->
+                    <div class="relative w-full max-w-lg mx-auto lg:mx-0">
+                        <!-- Dashboard/App Image Placeholder -->
+                        <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <!-- Using a placeholder that looks like a map/dashboard interface -->
+                            <img src="img/img_local.jpg" alt="MEOツール管理画面イメージ" class="w-full h-auto object-cover opacity-90">
+                            
+                            <!-- Overlay UI Mockup (CSS only) -->
+                           
+                        </div>
+
+                        <!-- Gold Badge -->
+                        <div class="absolute -bottom-12 left-0 right-0 z-20 flex justify-center items-center gap-3 md:gap-6 px-2">
+                            
+                            <!-- Badge 1: Initial Cost -->
+                            <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center text-white shadow-xl border-4 border-white transition hover:scale-105">
+                                <span class="text-[10px] md:text-xs font-bold tracking-widest text-yellow-50 drop-shadow-sm">初期費用</span>
+                                <div class="text-2xl md:text-4xl font-black leading-none mt-1 drop-shadow-md">
+                                    0<span class="text-sm md:text-lg">円</span>
+                                </div>
+                            </div>
+
+                            <!-- Badge 2: Success Rate -->
+                            <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center text-white shadow-xl border-4 border-white transition hover:scale-105">
+                                <span class="text-[10px] md:text-xs font-bold tracking-widest text-yellow-50 drop-shadow-sm">成果率</span>
+                                <div class="text-2xl md:text-4xl font-black leading-none mt-1 drop-shadow-md">
+                                    80<span class="text-sm md:text-lg">%</span>
+                                </div>
+                                <span class="text-[9px] md:text-xs font-bold">以上</span>
+                            </div>
+
+                            <!-- Badge 3: Stores (Highlighted) -->
+                            <div class="bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600 rounded-full w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center text-white shadow-xl border-4 border-white badge-decoration transition hover:scale-105 relative z-10">
+                                <span class="text-[10px] md:text-xs font-bold tracking-widest text-yellow-50 drop-shadow-sm">導入店舗数</span>
+                                <div class="text-xl md:text-3xl font-black leading-none mt-1 drop-shadow-md">
+                                    3,000
+                                </div>
+                                <span class="text-[9px] md:text-xs font-bold">店舗以上</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="lg:w-5/12 w-full mt-8 lg:mt-0 relative z-20">
+                    <!-- Nudge Popup Container (Top of Form) -->
+                    <div id="nudge-container" class="absolute -top-12 left-0 right-0 z-30 pointer-events-none flex justify-center"></div>
+
+                    <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 border border-gray-100">
+                        <div class="text-center mb-6">
+                            <h2 class="text-xl font-bold text-gray-800">
+                                <span class="text-red-500">無料</span>でお問い合わせ・お見積もり
+                            </h2>
+                            <p class="text-xs text-gray-500 mt-2">1営業日以内に担当者よりご連絡いたします</p>
+                        </div>
+
+                        <form id="hero-form" class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">氏名 <span class="text-red-500">*</span></label>
+                                    <input type="text" name="your_name" placeholder="例) 田中 太郎" required class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">会社名 <span class="text-red-500">*</span></label>
+                                    <input type="text" name="company_name" placeholder="例) 株式会社BLITZ" required class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                                <input type="email" name="email" placeholder="例) info@example.com" required class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">電話番号 <span class="text-gray-400 text-[10px] ml-1">任意</span></label>
+                                <input type="tel" name="telephone" placeholder="例) 03-1234-5678" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">ご相談内容 <span class="text-gray-400 text-[10px] ml-1">任意</span></label>
+                                <textarea name="contact" rows="2" placeholder="ご質問やご要望をご記入ください" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition"></textarea>
+                            </div>
+
+                            <div class="pt-2">
+                                <label class="flex items-center justify-center space-x-2 mb-4 cursor-pointer">
+                                    <input type="checkbox" required checked class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                                    <span class="text-xs text-gray-600">
+                                        <a href="#" class="text-blue-600 underline hover:text-blue-800">プライバシーポリシー</a>に同意する
+                                    </span>
+                                </label>
+                                <button type="submit" class="group w-full bg-[#00ab00] text-white text-lg font-bold py-4 rounded-full shadow-lg hover:bg-[#e60048] hover:shadow-xl transform hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-2 animate-shine">
+                                    無料で相談する
+                                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Problems Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">こんな<span class="text-yellow-600 bg-yellow-100 px-2">お悩み</span>ありませんか？</h2>
+                <div class="w-16 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg border-t-4 border-yellow-brand shadow-sm text-center group hover:shadow-md transition">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 shadow text-yellow-600 group-hover:scale-110 transition">
+                        <i data-lucide="clock" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">時間もノウハウもない</h3>
+                    <p class="text-gray-600">口コミ対策したい、集客対策になかなか時間が割けない。</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg border-t-4 border-yellow-brand shadow-sm text-center group hover:shadow-md transition">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 shadow text-yellow-600 group-hover:scale-110 transition">
+                        <i data-lucide="help-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">成果が出ない</h3>
+                    <p class="text-gray-600">過去に色々試したが、長続きしなかった。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg border-t-4 border-yellow-brand shadow-sm text-center group hover:shadow-md transition">
+                    <div class="bg-white w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 shadow text-yellow-600 group-hover:scale-110 transition">
+                        <i data-lucide="coins" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">予算がない</h3>
+                    <p class="text-gray-600">広告費を抑えて、低コストで効果的なWEB集客をしたい。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-2xl font-bold mb-6">
+                    BLITZ Marketingなら、<br class="md:hidden"><span class="bg-yellow-brand px-2">売上につながる集客</span>が可能です！
+                </p>
+                <p class="text-sm text-gray-500 mb-8">Googleマップだけでなく、Yahoo!プレイスにも対応</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="flex items-center justify-center gap-2 bg-[#00ab00] text-white px-10 py-3 rounded-full font-bold text-xl hover:opacity-80 transition shadow-[0_0_20px_#00ab00] hover:shadow-[0_0_30px_#00ab00]">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                        無料でお問い合わせる
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About MEO -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                        <span class="bg-yellow-brand text-black w-10 h-10 flex items-center justify-center rounded font-bold text-lg">?</span>
+                        MEO対策とは
+                    </h2>
+                    <p class="leading-relaxed text-gray-700 mb-6">
+                        MEO（Map Engine Optimization）とは、Googleマップ検索の上位に表示させるための施策です。
+                    </p>
+                    <p class="leading-relaxed text-gray-700 mb-6">
+                        ユーザー行動に基づくと、多くの人は上位表示されている店舗を選ぶ傾向にあり、MEO対策することで選ばれやすい店舗になります。
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-yellow-brand">
+                        <h4 class="font-bold mb-2 text-lg">導入のメリット</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-600 w-5 h-5"></i> 今求めているユーザーにアプローチできる</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-600 w-5 h-5"></i> 広告やSEO対策よりも低コスト</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-600 w-5 h-5"></i> 競合他店との差別化で選ばれる</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Placeholder for Map UI Image -->
+                    <div class="bg-white rounded-xl shadow-xl p-4 transform rotate-0 hover:rotate-2 transition duration-500">
+                        <div class="bg-gray-200 h-68 rounded-lg mb-4 overflow-hidden relative">
+                            <img src="img/meo_section_about_img02.png" alt="画像" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="flex justify-between items-center px-2">
+                            <div class="h-4 bg-gray-200 rounded w-1/3"></div>
+                            <div class="h-8 bg-yellow-brand rounded w-1/4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-yellow-600 font-bold tracking-widest text-sm">SERVICE</span>
+                <h2 class="text-3xl font-bold mt-2">サービス内容</h2>
+                <p class="mt-4 text-gray-600">まるっとお任せ！運用工数の90%以上を削減します</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition bg-white relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-yellow-brand"></div>
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i data-lucide="settings" class="mr-3 text-yellow-600"></i>内部対策・運用
+                    </h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="border-b pb-2">基本情報の最適化（各種設定・紹介文作成）</li>
+                        <li class="border-b pb-2">登録カテゴリの最適化</li>
+                        <li class="border-b pb-2">最新情報の投稿代行</li>
+                        <li>運用 / 保守管理</li>
+                    </ul>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition bg-white relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-black"></div>
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i data-lucide="share-2" class="mr-3 text-black"></i>外部対策・その他
+                    </h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="border-b pb-2">サイテーション / 風評対策</li>
+                        <li class="border-b pb-2">促進ツールの提供</li>
+                        <li class="border-b pb-2">定期レポート（順位計測・インサイト情報）</li>
+                        <li>WEBコンサルティング</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reason -->
+    <section id="reason" class="py-20 bg-zinc-900 text-white clip-diagonal">
+        <div class="container mx-auto px-6 pb-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    BLITZ Marketingが<br class="md:hidden"><span class="text-yellow-brand">選ばれる理由</span>
+                </h2>
+                <p class="mt-4 text-gray-400">貴社の一員として、集客最大化に尽力いたします。</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-yellow-brand transition">
+                    <div class="text-yellow-brand text-4xl font-black mb-4">01</div>
+                    <h4 class="font-bold text-lg mb-2">まるっとお任せ</h4>
+                    <p class="text-sm text-gray-400">運用を丸投げでお任せいただけます。最新のアルゴリズムにも随時対応いたします。</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-yellow-brand transition">
+                    <div class="text-yellow-brand text-4xl font-black mb-4">02</div>
+                    <h4 class="font-bold text-lg mb-2">誠実な運用</h4>
+                    <p class="text-sm text-gray-400">Googleのガイドラインに厳格に則った、リスクの少ない安全な運用を行います。</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-yellow-brand transition">
+                    <div class="text-yellow-brand text-4xl font-black mb-4">03</div>
+                    <h4 class="font-bold text-lg mb-2">豊富な実績</h4>
+                    <p class="text-sm text-gray-400">全国・業種を問わず累計1,000店舗以上の実績。独自ノウハウで支援します。</p>
+                </div>
+                <div class="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-yellow-brand transition">
+                    <div class="text-yellow-brand text-4xl font-black mb-4">04</div>
+                    <h4 class="font-bold text-lg mb-2">充実のサポート</h4>
+                    <p class="text-sm text-gray-400">MEOだけでなく、WEBマーケティング全般のご相談も可能です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">導入実績・効果</h2>
+                <p class="mt-4 text-gray-600">様々な業種・業界で結果が出ています！</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Case 1 -->
+                <div class="bg-white border rounded-lg p-6 shadow-sm">
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 inline-block rounded mb-2">クリニック</div>
+                    <h4 class="font-bold mb-4">エリア＋歯科</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>順位</span>
+                            <span class="font-bold text-red-600">26位 <i data-lucide="arrow-right" class="inline w-3 h-3"></i> 1位</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>アクセス</span>
+                            <span class="font-bold text-red-600">3.1倍UP</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2">対策期間：6ヶ月</div>
+                    </div>
+                </div>
+                <!-- Case 2 -->
+                <div class="bg-white border rounded-lg p-6 shadow-sm">
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 inline-block rounded mb-2">居酒屋</div>
+                    <h4 class="font-bold mb-4">エリア＋焼き鳥</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>順位</span>
+                            <span class="font-bold text-red-600">48位 <i data-lucide="arrow-right" class="inline w-3 h-3"></i> 2位</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>来店数</span>
+                            <span class="font-bold text-red-600">2.5倍UP</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2">対策期間：1年</div>
+                    </div>
+                </div>
+                <!-- Case 3 -->
+                <div class="bg-white border rounded-lg p-6 shadow-sm">
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 inline-block rounded mb-2">エステサロン</div>
+                    <h4 class="font-bold mb-4">エリア＋痩身</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>順位</span>
+                            <span class="font-bold text-red-600">32位 <i data-lucide="arrow-right" class="inline w-3 h-3"></i> 3位</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>来店数</span>
+                            <span class="font-bold text-red-600">2.3倍UP</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2">対策期間：6ヶ月</div>
+                    </div>
+                </div>
+                <!-- Case 4 -->
+                <div class="bg-white border rounded-lg p-6 shadow-sm">
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 inline-block rounded mb-2">フィットネスジム</div>
+                    <h4 class="font-bold mb-4">エリア＋パーソナル</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>順位</span>
+                            <span class="font-bold text-red-600">57位 <i data-lucide="arrow-right" class="inline w-3 h-3"></i> 5位</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b pb-1">
+                            <span>来店数</span>
+                            <span class="font-bold text-red-600">2.6倍UP</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-2">対策期間：1年</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">利用者様の声</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <div class="text-yellow-400 text-4xl absolute top-4 left-4">"</div>
+                    <div class="mb-4 pt-4">
+                        <h4 class="font-bold text-lg">新規顧客の来店が週3→10人に！</h4>
+                        <p class="text-sm text-gray-500 mt-1">東京都・美容院オーナー S様</p>
+                    </div>
+                    <p class="text-gray-600 text-sm">丸投げで利用でき、本業に専念できるので助かっています。成果が可視化されるので安心して継続しています。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <div class="text-yellow-400 text-4xl absolute top-4 left-4">"</div>
+                    <div class="mb-4 pt-4">
+                        <h4 class="font-bold text-lg">ネットからの集客が大幅に増加！</h4>
+                        <p class="text-sm text-gray-500 mt-1">大阪府・飲食店経営 A様</p>
+                    </div>
+                    <p class="text-gray-600 text-sm">ランチタイムの予約数が昨年比30%増。データ分析や解析もサポートしてもらえ、改善点が見つかりました。</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <div class="text-yellow-400 text-4xl absolute top-4 left-4">"</div>
+                    <div class="mb-4 pt-4">
+                        <h4 class="font-bold text-lg">外国人観光客のお客様が増加！</h4>
+                        <p class="text-sm text-gray-500 mt-1">神奈川県・小売業者 K様</p>
+                    </div>
+                    <p class="text-gray-600 text-sm">外国語対応のMEO対策を取り入れ、外国人観光客からの口コミも増え、売上全体の15%を占めるまでになっています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">よくある質問</h2>
+            </div>
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="font-bold text-lg mb-2 flex items-start gap-3">
+                        <span class="text-yellow-600">Q.</span>
+                        SEO対策との違いは？
+                    </h3>
+                    <p class="text-gray-600 pl-8">MEO対策はGoogleビジネスプロフィール(GBP)を最適化し、マップ検索上位を目指します。SEO対策はWEBサイト自体を最適化する施策です。</p>
+                </div>
+                <!-- Q2 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="font-bold text-lg mb-2 flex items-start gap-3">
+                        <span class="text-yellow-600">Q.</span>
+                        他社とキーワードが被ることはありますか？
+                    </h3>
+                    <p class="text-gray-600 pl-8">当社は「1キーワードにつき1企業様」としております。近隣競合店と被ることはございません。（先着順）</p>
+                </div>
+                <!-- Q3 -->
+                <div class="border-b border-gray-200 pb-6">
+                    <h3 class="font-bold text-lg mb-2 flex items-start gap-3">
+                        <span class="text-yellow-600">Q.</span>
+                        どのくらいで上位表示されますか？
+                    </h3>
+                    <p class="text-gray-600 pl-8">平均3ヶ月程度で上位表示が可能ですが、キーワードによっては半年ほどかかる場合もございます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Area -->
+    <section id="contact" class="py-20 bg-yellow-brand/20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden relative">
+                <!-- Nudge Popup Container -->
+                <div id="nudge-container" class="absolute top-4 left-0 right-0 z-20 pointer-events-none flex justify-center">
+                    <!-- Popups will appear here via JS -->
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 p-6 text-white text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold">お問い合わせ・お見積もり<br><span class="text-yellow-300">完全無料</span>!!</h2>
+                    <p class="text-sm mt-2 opacity-90">※メールでのお問い合わせは1営業日以内に必ずご連絡いたします！</p>
+                </div>
+                
+                <div class="p-6 md:p-12">
+                    <form id="contactform" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Left Column -->
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">会社名・店舗名 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded ml-2">必須</span></label>
+                                    <input required id="company_name" name="company_name" type="text" placeholder="例) 株式会社BLITZ Marketing" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">担当者名 <span class="bg-gray-400 text-white text-xs px-2 py-0.5 rounded ml-2">任意</span></label>
+                                    <input type="text" id="your_name" name="your_name" placeholder="例) 田中 太郎" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">お電話番号 <span class="bg-gray-400 text-white text-xs px-2 py-0.5 rounded ml-2">任意</span></label>
+                                    <input type="tel" id="telephone" name="telephone" placeholder="例) 09012345678" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">メールアドレス <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded ml-2">必須</span></label>
+                                    <input required id="email" name="email" type="email" placeholder="例) info@blitz.com" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">相談内容 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded ml-2">必須</span></label>
+                                    <textarea required name="contact" id="contact" rows="4" placeholder="相談内容を入力してください" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">対策したいキーワード<br class="md:hidden"> <span class="bg-gray-400 text-white text-xs px-2 py-0.5 rounded ml-2">任意</span></label>
+                                    <textarea name="keyword" id="keyword" rows="2" placeholder="キーワードやサイト名を入力してください" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                    <label class="flex items-center space-x-3 cursor-pointer">
+                                        <input id="material" name="material" type="checkbox" value="希望する" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                        <span class="font-bold text-gray-700">資料請求を希望する</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                            <label class="flex items-center justify-center space-x-2 mb-6 cursor-pointer">
+                                <input checked type="checkbox" required class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="text-sm">
+                                    <a href="#" class="text-blue-600 underline hover:text-blue-800">プライバシーポリシー</a>に同意する
+                                </span>
+                            </label>
+                            <button type="submit" class="w-full md:w-2/3 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-xl font-bold py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+                                送信する
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info -->
+    <section id="company" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">会社概要</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
+                    <div class="flex flex-col border-b md:border-b-0 border-gray-100 pb-4 md:pb-0">
+                        <span class="text-gray-400 text-sm mb-1">会社名</span>
+                        <span class="font-bold">株式会社BLITZ Marketing</span>
+                    </div>
+                    <div class="flex flex-col border-b md:border-b-0 border-gray-100 pb-4 md:pb-0">
+                        <span class="text-gray-400 text-sm mb-1">代表</span>
+                        <span class="font-bold">吉原 教一郎</span>
+                    </div>
+                    <div class="flex flex-col border-b md:border-b-0 border-gray-100 pb-4 md:pb-0 md:col-span-2">
+                        <span class="text-gray-400 text-sm mb-1">住所</span>
+                        <span class="font-bold">〒150-0002 東京都渋谷区渋谷2-12-12 三貴ビル 3階</span>
+                    </div>
+                    <div class="flex flex-col border-b md:border-b-0 border-gray-100 pb-4 md:pb-0">
+                        <span class="text-gray-400 text-sm mb-1">設立</span>
+                        <span class="font-bold">2011年12月28日</span>
+                    </div>
+                    <div class="flex flex-col border-b md:border-b-0 border-gray-100 pb-4 md:pb-0">
+                        <span class="text-gray-400 text-sm mb-1">資本金</span>
+                        <span class="font-bold">4,000万円</span>
+                    </div>
+                    <div class="flex flex-col md:col-span-2">
+                        <span class="text-gray-400 text-sm mb-1">事業内容</span>
+                        <ul class="list-disc list-inside font-medium text-gray-800 space-y-1">
+                            <li>WEBマーケティング事業</li>
+                            <li>WEB広告代理</li>
+                            <li>WEBブランディング事業(誹謗中傷対策)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-gray-400 py-12 text-sm mb-20 md:mb-0">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4 text-lg font-bold text-white">株式会社BLITZ Marketing</p>
+            <p>&copy; BLITZ Marketing Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Fixed Footer -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 md:hidden flex items-center justify-center px-3 border-t border-gray-100 h-20">
+    
+        <div class="flex w-full gap-3">
+            
+            <a href="tel:0120276016" class="flex-1 flex items-center justify-center gap-2 bg-[#00ab00] text-white py-3 rounded-full font-bold hover:opacity-80 transition shadow-sm">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span class="text-sm">0120-276-016</span>
+            </a>
+    
+            <a href="#contact" class="flex-1 flex items-center justify-center gap-2 bg-[#0025b6] text-white py-3 rounded-full font-bold hover:opacity-80 transition shadow-sm">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                <span class="text-sm">お問い合わせ</span>
+            </a>
+    
+        </div>
+    
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Icon initialization
+        lucide.createIcons();
+
+        // Scroll to form and optionally check material box
+        function scrollToForm(checkMaterial) {
+            const formSection = document.getElementById('contact');
+            formSection.scrollIntoView({ behavior: 'smooth' });
+            
+            if (checkMaterial) {
+                const materialCheckbox = document.getElementById('material');
+                if (materialCheckbox) {
+                    materialCheckbox.checked = true;
+                }
+            }
+        }
+
+        // Prevent Back Button (Push State Hack)
+        // Note: Browsers may block strict prevention, but this keeps the user on the page by pushing state
+        history.pushState(null, null, location.href);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, location.href);
+            // Optional: alert('このページから離れることはできません。');
+        });
+
+        // Nudge Notification Logic
+        const formInputs = document.querySelectorAll('#contactform input, #contactform textarea');
+        const nudgeContainer = document.getElementById('nudge-container');
+        let hasNudged = false;
+
+        formInputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                if (!hasNudged) {
+                    showNudge();
+                    hasNudged = true;
+                }
+            });
+        });
+
+        function showNudge() {
+            // Random number between 2 and 5
+            const count = Math.floor(Math.random() * 4) + 2;
+            
+            const popup = document.createElement('div');
+            popup.className = 'nudge-popup bg-red-600 text-white px-6 py-3 rounded-full shadow-lg font-bold text-sm md:text-base flex items-center gap-2';
+            popup.innerHTML = `
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
+                </span>
+                現在<span class="text-yellow-300 text-lg mx-1">${count}人</span>がお問い合わせしています
+            `;
+            
+            nudgeContainer.appendChild(popup);
+
+            // Remove after 5 seconds
+            setTimeout(() => {
+                popup.style.transition = 'opacity 0.5s';
+                popup.style.opacity = '0';
+                setTimeout(() => popup.remove(), 500);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
